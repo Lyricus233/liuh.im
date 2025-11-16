@@ -25,3 +25,17 @@
     rgba(84, 174, 255, 0.4) 100%
   );
 }
+
+@media (prefers-color-scheme: dark) {
+  [data-time-badge],
+  [data-location-badge],
+  [data-organization-badge] {
+    color: #f9fafb;
+  }
+
+  [data-time-badge] svg,
+  [data-location-badge] svg,
+  [data-organization-badge] svg {
+    fill: currentColor;
+  }
+}
