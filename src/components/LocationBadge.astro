@@ -1,0 +1,14 @@
+---
+import octicons from "@primer/octicons";
+
+const LocationIcon = octicons["location"].toSVG({
+  width: 16,
+  height: 16,
+  "aria-label": "Location",
+});
+---
+
+<a data-location-badge class="inline-flex items-center gap-1">
+  <span class="inline-flex items-center" set:html={LocationIcon} />
+  <span> Qingdao, China </span>
+</a>

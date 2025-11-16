@@ -1,0 +1,19 @@
+---
+import octicons from "@primer/octicons";
+
+const OrganizationIcon = octicons["organization"].toSVG({
+  width: 16,
+  height: 16,
+  "aria-label": "Organization",
+});
+---
+
+<a
+  data-location-badge
+  class="inline-flex items-center gap-1 no-underline hover:underline"
+  href="https://github.com/BPJudge"
+  target="_blank"
+>
+  <span class="inline-flex items-center" set:html={OrganizationIcon} />
+  <span class="font-semibold"> @BPJudge </span>
+</a>

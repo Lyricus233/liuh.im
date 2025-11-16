@@ -1,10 +1,27 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans:
+    "Noto Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 @layer base {
   body {
     @apply dark:bg-zinc-900 dark:text-zinc-100;
+    @apply font-sans;
   }
   svg {
     @apply inline-block;
   }
+}
+
+#mark {
+  display: inline;
+  background: linear-gradient(
+    180deg,
+    transparent 75%,
+    rgba(84, 174, 255, 0.4) 75%,
+    rgba(84, 174, 255, 0.4) 100%
+  );
 }

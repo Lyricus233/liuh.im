@@ -1,19 +1,69 @@
 ---
+import { Icon } from "astro-icon/components";
+import LocationBadge from "../components/LocationBadge.astro";
+import OrganizationBadge from "../components/OrganizationBadge.astro";
+import TimeBadge from "../components/TimeBadge.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { social } from "../social";
+import social from "../social.json";
 ---
 
 <BaseLayout title="Liu Hao">
   <div id="homepage" class="flex min-h-screen items-center justify-center">
-    <main class="flex flex-col items-center gap-6 text-center">
-      <h1 class="text-4xl">@Lyricus</h1>
-      <div class="flex w-full max-w-md flex-wrap justify-center gap-4">
+    <main class="flex flex-col items-center gap-6">
+      <div class="flex flex-wrap items-end justify-between gap-8">
+        <div>
+          <h1 class="text-4xl font-semibold">Liu Hao</h1>
+          <p class="text-3xl" id="mark">@Lyricus</p>
+          <p class="mt-4 text-sm text-zinc-600 dark:text-zinc-300">
+            Student / Developer / OIer(?
+          </p>
+        </div>
+        <ul class="m-0 list-none p-0">
+          <li class="text-medium flex items-center gap-8 pt-4">
+            <LocationBadge />
+          </li>
+          <li class="text-medium flex items-center gap-8 pt-4">
+            <TimeBadge />
+          </li>
+          <li class="text-medium flex items-center gap-8 pt-4">
+            <OrganizationBadge />
+          </li>
+        </ul>
+      </div>
+      <div
+        class="mt-2 flex justify-center divide-x divide-dashed divide-gray-300 text-3xl dark:divide-gray-600"
+      >
+        {
+          social.map(({ url, title, icon }) => (
+            <div class="flex px-1">
+              <a
+                class="px-2 transition duration-100 hover:scale-110"
+                title={title}
+                href={url}
+                target="_blank"
+              >
+                <Icon name={icon} title={title} />
+              </a>
+            </div>
+          ))
+        }
+      </div>
+      <!-- <div class="flex w-full max-w-md flex-wrap justify-center gap-4">
         <a
-          href="https://blog.liuh.im"
+          href="/about"
           class="inline-flex items-center justify-center rounded-full border border-zinc-300/80 px-6 py-2 text-sm font-medium shadow-sm transition hover:bg-zinc-100 hover:shadow-md dark:border-zinc-600 dark:hover:bg-zinc-800"
         >
-          Blog
+          About
         </a>
+        <a
+          href="/friends"
+          class="inline-flex items-center justify-center rounded-full border border-zinc-300/80 px-6 py-2 text-sm font-medium shadow-sm transition hover:bg-zinc-100 hover:shadow-md dark:border-zinc-600 dark:hover:bg-zinc-800"
+        >
+          Friends
+        </a>
+      </div> -->
+      <div id="footer" class="mt-4 text-xs text-zinc-500 dark:text-zinc-500/80">
+        &copy; 2022 - 2025 Liu Hao. All rights reserved.
       </div>
     </main>
   </div>

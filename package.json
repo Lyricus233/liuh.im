@@ -9,6 +9,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/noto-sans": "^5.2.10",
+    "@iconify-json/simple-icons": "^1.2.58",
+    "@primer/octicons": "^19.21.0",
     "@tailwindcss/vite": "^4.1.17",
     "astro": "^5.15.4",
     "astro-icon": "^1.1.5",
