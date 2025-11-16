@@ -13,5 +13,15 @@
     "title": "telegram",
     "url": "https://t.me/lyricus08",
     "icon": "simple-icons:telegram"
+  },
+  {
+    "title": "email",
+    "url": "mailto:2490665576@qq.com",
+    "icon": "simple-icons:gmail"
+  },
+  {
+    "title": "blog",
+    "url": "https://blog.liuh.im/",
+    "icon": "fa6-solid:blog"
   }
 ]

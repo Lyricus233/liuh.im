@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/noto-sans": "^5.2.10",
+    "@iconify-json/fa6-solid": "^1.2.4",
     "@iconify-json/simple-icons": "^1.2.58",
     "@primer/octicons": "^19.21.0",
     "@tailwindcss/vite": "^4.1.17",
